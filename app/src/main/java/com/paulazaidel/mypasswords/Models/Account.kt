@@ -8,7 +8,7 @@ class Account (
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
     @NonNull
-    val id: Int,
+    val id: Long,
 
     @ColumnInfo(name = "username")
     val username: String,

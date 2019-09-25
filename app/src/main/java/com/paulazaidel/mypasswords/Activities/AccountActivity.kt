@@ -28,7 +28,7 @@ class AccountActivity : AppCompatActivity() {
     }
 
     private fun saveAccount() {
-        val id = txt_acc_id.text.toString().toInt()
+        val id = txt_acc_id.text.toString().toLong()
         val description = edt_acc_description.text.toString()
         val username = edt_acc_username.text.toString()
         val password = edt_acc_password.text.toString()
@@ -39,6 +39,8 @@ class AccountActivity : AppCompatActivity() {
         AppDatabase.getAppDatabase(this).accountDao().insert(account)
 
         Toast.makeText(this, getString(R.string.app_add_successfully), Toast.LENGTH_SHORT).show()
+
+        finish()
     }
 
     private fun validateForm(): Boolean {
