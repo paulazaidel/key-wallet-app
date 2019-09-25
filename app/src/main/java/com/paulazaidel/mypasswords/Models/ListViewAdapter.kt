@@ -20,7 +20,7 @@ class ListViewAdapter : BaseAdapter {
         return accounts.count()
     }
 
-    override fun getItem(position: Int): Any {
+    override fun getItem(position: Int): Account {
         return accounts[position]
     }
 
