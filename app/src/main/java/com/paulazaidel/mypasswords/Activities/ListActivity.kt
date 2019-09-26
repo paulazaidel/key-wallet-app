@@ -2,7 +2,6 @@ package com.paulazaidel.mypasswords.Activities
 
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import com.paulazaidel.mypasswords.DataBase.AppDatabase
 import com.paulazaidel.mypasswords.Models.Account
@@ -20,7 +19,6 @@ class ListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
         setSupportActionBar(toolbar)
-
 
         fab.setOnClickListener { view ->
             val intent = Intent(this, AccountActivity::class.java)
@@ -50,5 +48,4 @@ class ListActivity : AppCompatActivity() {
         adapter = ListViewAdapter(this, accounts)
         lv_accounts.adapter = adapter
     }
-
 }
