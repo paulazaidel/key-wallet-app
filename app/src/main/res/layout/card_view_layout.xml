@@ -3,11 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="80dp"
-    app:cardCornerRadius="2dp"
-    app:contentPadding="10dp"
-    app:cardPreventCornerOverlap="false"
-    app:cardUseCompatPadding="true">
+    android:layout_height="100dp"
+    app:contentPadding="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"

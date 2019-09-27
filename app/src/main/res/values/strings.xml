@@ -9,8 +9,12 @@
     <string name="app_password">Senha</string>
     <string name="app_url">Site URL</string>
     <string name="app_save">Salvar</string>
+    <string name="app_yes">Sim</string>
+    <string name="app_no">Não</string>
 
     <string name="app_add_successfully">Adicionado!</string>
+    <string name="app_remove_question">Deseja excluir está conta?</string>
+    <string name="app_remove_successfully">Conta Excluída</string>
 
     <string name="app_err_required">Campo Obrigatório</string>
 
