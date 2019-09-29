@@ -26,7 +26,7 @@ class SwipeMenu : SwipeMenuCreator {
         menu?.addMenuItem(editItem)
 
         val deleteItem = SwipeMenuItem(context)
-        deleteItem.background = ContextCompat.getDrawable(context ,R.color.colorPrimaryDark)
+        deleteItem.background = ContextCompat.getDrawable(context ,R.color.colorPrimary)
         deleteItem.width = dpTopx(100)
         deleteItem.setIcon(R.drawable.ic_delete)
         menu?.addMenuItem(deleteItem)
