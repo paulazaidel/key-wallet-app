@@ -21,10 +21,29 @@ class AccountActivity : AppCompatActivity() {
         setContentView(R.layout.activity_account)
         setSupportActionBar(toolbar)
 
+        getAccountFromIntent()
+
         fab.setOnClickListener { view ->
             if (validateForm())
                 saveAccount()
         }
+    }
+
+    private fun getAccountFromIntent() {
+        if (intent.extras != null)
+            if (intent.extras.containsKey("account")) {
+                val account = intent.extras.getSerializable("account") as? Account
+
+                if (account != null) {
+                    txt_acc_id.setText(account.id.toString())
+                    edt_acc_description.setText(account.description)
+                    edt_acc_username.setText(account.username)
+                    edt_acc_password.setText(account.password)
+                    edt_acc_url.setText(account.url)
+
+                    title = resources.getText(R.string.title_activity_edit)
+                }
+            }
     }
 
     private fun saveAccount() {
@@ -36,7 +55,10 @@ class AccountActivity : AppCompatActivity() {
 
         val account = Account(id, username, password.encrypt(), description, url)
 
-        AppDatabase.getAppDatabase(this).accountDao().insert(account)
+        if (id > 0)
+            AppDatabase.getAppDatabase(this).accountDao().update(account)
+        else
+            AppDatabase.getAppDatabase(this).accountDao().insert(account)
 
         Toast.makeText(this, getString(R.string.app_add_successfully), Toast.LENGTH_SHORT).show()
 

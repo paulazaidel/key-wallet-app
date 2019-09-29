@@ -38,7 +38,12 @@ class ListActivity : AppCompatActivity() {
 
         lv_accounts.setOnMenuItemClickListener { position, menu, index ->
             if (index == 0) { // Edit
-                Toast.makeText(this, "Edit", Toast.LENGTH_SHORT).show()
+                var account = adapter.getItem(position)
+                val intent = Intent(this, AccountActivity::class.java)
+                intent.putExtra("account", account)
+                startActivity(intent)
+
+
             } else if (index == 1) { // Delete
                 var account = adapter.getItem(position)
                 showDeleteDialog(account)

@@ -3,6 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_create_account">Adicionar Conta</string>
     <string name="title_activity_list">Contas</string>
+    <string name="title_activity_edit">Editar</string>
     <string name="app_create">Adicionar</string>
     <string name="app_description">Descrição</string>
     <string name="app_username">Usuário</string>

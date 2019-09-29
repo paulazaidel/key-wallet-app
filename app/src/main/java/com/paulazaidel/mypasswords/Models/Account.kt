@@ -2,6 +2,7 @@ package com.paulazaidel.mypasswords.Models
 
 import androidx.annotation.NonNull
 import androidx.room.*
+import java.io.Serializable
 
 @Entity(tableName = "accounts")
 class Account (
@@ -21,4 +22,4 @@ class Account (
 
     @ColumnInfo(name = "url")
     val url: String
-)
+) : Serializable
