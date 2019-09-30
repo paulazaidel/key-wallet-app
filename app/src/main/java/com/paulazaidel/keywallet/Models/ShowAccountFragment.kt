@@ -1,15 +1,11 @@
-package com.paulazaidel.mypasswords.Models
+package com.paulazaidel.keywallet.Models
 
 import android.app.AlertDialog
 import android.app.Dialog
-import android.content.DialogInterface
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
-import com.paulazaidel.mypasswords.Extensions.decrypt
-import com.paulazaidel.mypasswords.R
+import com.paulazaidel.keywallet.Extensions.decrypt
+import com.paulazaidel.keywallet.R
 import kotlinx.android.synthetic.main.show_account_layout.view.*
 
 class ShowAccountFragment : DialogFragment {

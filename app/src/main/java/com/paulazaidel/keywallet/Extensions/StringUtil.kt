@@ -1,4 +1,4 @@
-package com.paulazaidel.mypasswords.Extensions
+package com.paulazaidel.keywallet.Extensions
 
 import android.os.Build
 import java.util.*

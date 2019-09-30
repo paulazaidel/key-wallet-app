@@ -1,10 +1,10 @@
-package com.paulazaidel.mypasswords.Models
+package com.paulazaidel.keywallet.Models
 
 import android.app.Activity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import com.paulazaidel.mypasswords.R
+import com.paulazaidel.keywallet.R
 import kotlinx.android.synthetic.main.card_view_layout.view.*
 
 class ListViewAdapter : BaseAdapter {

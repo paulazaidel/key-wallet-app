@@ -1,4 +1,4 @@
-package com.paulazaidel.mypasswords
+package com.paulazaidel.keywallet
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

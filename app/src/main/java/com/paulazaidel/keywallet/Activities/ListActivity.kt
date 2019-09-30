@@ -1,19 +1,18 @@
-package com.paulazaidel.mypasswords.Activities
+package com.paulazaidel.keywallet.Activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.baoyz.swipemenulistview.SwipeMenuListView
-import com.paulazaidel.mypasswords.DataBase.AppDatabase
-import com.paulazaidel.mypasswords.Models.Account
-import com.paulazaidel.mypasswords.R
+import com.paulazaidel.keywallet.DataBase.AppDatabase
+import com.paulazaidel.keywallet.Models.Account
+import com.paulazaidel.keywallet.R
 
 import kotlinx.android.synthetic.main.activity_list.*
-import com.paulazaidel.mypasswords.Models.ListViewAdapter
-import com.paulazaidel.mypasswords.Models.ShowAccountFragment
-import com.paulazaidel.mypasswords.Models.SwipeMenu
+import com.paulazaidel.keywallet.Models.ListViewAdapter
+import com.paulazaidel.keywallet.Models.ShowAccountFragment
+import com.paulazaidel.keywallet.Models.SwipeMenu
 import kotlinx.android.synthetic.main.content_list.*
 
 

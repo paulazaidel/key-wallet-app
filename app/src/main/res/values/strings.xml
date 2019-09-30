@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyPasswords</string>
+    <string name="app_name">Key Wallet</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_create_account">Adicionar Conta</string>
     <string name="title_activity_list">Contas</string>

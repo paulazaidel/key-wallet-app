@@ -1,4 +1,4 @@
-package com.paulazaidel.mypasswords.Models
+package com.paulazaidel.keywallet.Models
 
 import android.app.Activity
 import com.baoyz.swipemenulistview.SwipeMenu
@@ -6,7 +6,7 @@ import com.baoyz.swipemenulistview.SwipeMenuCreator
 import com.baoyz.swipemenulistview.SwipeMenuItem
 import android.util.TypedValue
 import androidx.core.content.ContextCompat
-import com.paulazaidel.mypasswords.R
+import com.paulazaidel.keywallet.R
 
 
 class SwipeMenu : SwipeMenuCreator {

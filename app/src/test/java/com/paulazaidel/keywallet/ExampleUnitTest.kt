@@ -1,4 +1,4 @@
-package com.paulazaidel.mypasswords
+package com.paulazaidel.keywallet
 
 import org.junit.Test
 

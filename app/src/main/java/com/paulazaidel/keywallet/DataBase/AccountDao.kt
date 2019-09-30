@@ -1,7 +1,7 @@
-package com.paulazaidel.mypasswords.DataBase
+package com.paulazaidel.keywallet.DataBase
 
 import androidx.room.*
-import com.paulazaidel.mypasswords.Models.Account
+import com.paulazaidel.keywallet.Models.Account
 
 @Dao
 interface AccountDao {
