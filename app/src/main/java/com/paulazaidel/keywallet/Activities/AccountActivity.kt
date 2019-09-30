@@ -1,6 +1,7 @@
 package com.paulazaidel.keywallet.Activities
 
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,8 @@ class AccountActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_account)
         setSupportActionBar(toolbar)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         getAccountFromIntent()
 
@@ -85,5 +88,12 @@ class AccountActivity : AppCompatActivity() {
             textInput.isErrorEnabled = false
             true
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        if (item?.itemId == android.R.id.home){
+           finish()
+            return true
+        } else return super.onOptionsItemSelected(item)
     }
 }
