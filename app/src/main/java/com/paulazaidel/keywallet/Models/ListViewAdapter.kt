@@ -4,8 +4,11 @@ import android.app.Activity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import com.amulyakhare.textdrawable.TextDrawable
+import com.amulyakhare.textdrawable.util.ColorGenerator
 import com.paulazaidel.keywallet.R
-import kotlinx.android.synthetic.main.card_view_layout.view.*
+import kotlinx.android.synthetic.main.list_item_layout.view.*
+
 
 class ListViewAdapter : BaseAdapter {
     private var context: Activity
@@ -29,11 +32,20 @@ class ListViewAdapter : BaseAdapter {
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        var view = context.layoutInflater.inflate(R.layout.card_view_layout, parent, false)
+        var view = context.layoutInflater.inflate(R.layout.list_item_layout, parent, false)
 
-        view.txt_list_description.text = accounts[position].description
-        view.txt_list_username.text = accounts[position].username
+        val account = accounts[position]
+        val generator = ColorGenerator.MATERIAL
+        val firstLetter = account.description.get(0)
+        val color = generator.getColor(firstLetter)
 
-        return view;
+        val drawable = TextDrawable.builder()
+            .buildRound(firstLetter.toString(), color)
+
+        view.txt_list_description.text = account.description
+        view.txt_list_username.text = account.username
+        view.img_list_view.setImageDrawable(drawable)
+
+        return view
     }
 }
