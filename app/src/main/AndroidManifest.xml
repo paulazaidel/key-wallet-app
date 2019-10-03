@@ -9,9 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name="com.paulazaidel.keywallet.Activities.SplashActivity"
-            android:theme="@style/AppTheme.Splash">
+        <activity android:name=".Activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,11 +17,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.paulazaidel.keywallet.Activities.ListActivity"
-            android:label="@string/title_activity_list"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name=".Activities.SplashActivity"
+            android:theme="@style/AppTheme.Splash">
+
+        </activity>
         <activity
-            android:name="com.paulazaidel.keywallet.Activities.AccountActivity"
+            android:name=".Activities.ListActivity"
+            android:label="@string/title_activity_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.AccountActivity"
             android:label="@string/title_activity_create_account"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
