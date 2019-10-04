@@ -1,22 +1,22 @@
 <resources>
     <string name="app_name">Key Wallet</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_create_account">Adicionar Conta</string>
-    <string name="title_activity_list">Contas</string>
-    <string name="title_activity_edit">Editar</string>
-    <string name="app_create">Adicionar</string>
-    <string name="app_description">Descrição</string>
-    <string name="app_username">Usuário</string>
-    <string name="app_password">Senha</string>
-    <string name="app_url">Site URL</string>
-    <string name="app_save">Salvar</string>
-    <string name="app_yes">Sim</string>
-    <string name="app_no">Não</string>
+    <string name="title_activity_create_account">New Account</string>
+    <string name="title_activity_list">Accounts</string>
+    <string name="title_activity_edit">Edit</string>
+    <string name="app_create">New</string>
+    <string name="app_description">Description</string>
+    <string name="app_username">User</string>
+    <string name="app_password">Password</string>
+    <string name="app_url">URL Site</string>
+    <string name="app_save">Save</string>
+    <string name="app_yes">Yes</string>
+    <string name="app_no">No</string>
 
-    <string name="app_add_successfully">Adicionado!</string>
-    <string name="app_remove_question">Deseja excluir está conta?</string>
-    <string name="app_remove_successfully">Conta Excluída</string>
+    <string name="app_add_successfully">Successfully Created</string>
+    <string name="app_remove_question">Do you want to delete this account?</string>
+    <string name="app_remove_successfully">Account Deleted</string>
 
-    <string name="app_err_required">Campo Obrigatório</string>
+    <string name="app_err_required">Required</string>
 
 </resources>

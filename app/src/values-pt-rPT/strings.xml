@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Key Wallet</string>
+    <string name="action_settings">Configurações</string>
+    <string name="title_activity_create_account">Adicionar Conta</string>
+    <string name="title_activity_list">Contas</string>
+    <string name="title_activity_edit">Editar</string>
+    <string name="app_create">Adicionar</string>
+    <string name="app_description">Descrição</string>
+    <string name="app_username">Usuário</string>
+    <string name="app_password">Senha</string>
+    <string name="app_url">Site URL</string>
+    <string name="app_save">Salvar</string>
+    <string name="app_yes">Sim</string>
+    <string name="app_no">Não</string>
+
+    <string name="app_add_successfully">Adicionado!</string>
+    <string name="app_remove_question">Deseja excluir essa conta?</string>
+    <string name="app_remove_successfully">Conta Excluída</string>
+
+    <string name="app_err_required">Campo Obrigatório</string>
+
+</resources>
