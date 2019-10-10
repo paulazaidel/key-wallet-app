@@ -8,14 +8,11 @@ import android.os.Handler
 class SplashActivity : AppCompatActivity() {
 
     private var delayHandler: Handler? = null
-    private val SPLASH_DELAY: Long = 2000
 
     private val callNextActivity: Runnable = Runnable {
         if (!isFinishing) {
-
-            val intent = Intent(applicationContext, ListActivity::class.java)
+            val intent = Intent(applicationContext, LoginActivity::class.java)
             startActivity(intent)
-            finish()
         }
     }
 
@@ -25,7 +22,7 @@ class SplashActivity : AppCompatActivity() {
         delayHandler = Handler()
 
         //Navigate with delay
-        delayHandler!!.postDelayed(callNextActivity, SPLASH_DELAY)
+        delayHandler!!.postDelayed(callNextActivity, 2000)
     }
 
     public override fun onDestroy() {

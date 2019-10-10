@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import com.amulyakhare.textdrawable.TextDrawable
 import com.amulyakhare.textdrawable.util.ColorGenerator
+import com.paulazaidel.keywallet.Extensions.toString
 import com.paulazaidel.keywallet.R
 import kotlinx.android.synthetic.main.list_item_layout.view.*
 
@@ -42,8 +43,8 @@ class ListViewAdapter : BaseAdapter {
         val drawable = TextDrawable.builder()
             .buildRound(firstLetter.toString(), color)
 
-        view.txt_list_description.text = account.description
-        view.txt_list_username.text = account.username
+        view.txt_list_description.text = account.description.toString(17)
+        view.txt_list_username.text = account.username.toString(17)
         view.img_list_view.setImageDrawable(drawable)
 
         return view

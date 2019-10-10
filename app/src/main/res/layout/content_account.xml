@@ -21,7 +21,8 @@
             android:id="@+id/edt_acc_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/app_description" />
+            android:hint="@string/app_description"
+            android:maxLength="50" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -34,7 +35,9 @@
             android:id="@+id/edt_acc_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/app_username" />
+            android:hint="@string/app_username"
+            android:inputType="textEmailAddress"
+            android:maxLength="50" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -49,7 +52,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/app_password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:maxLength="50" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -63,7 +67,8 @@
             android:id="@+id/edt_acc_url"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/app_url"/>
+            android:hint="@string/app_url"
+            android:maxLength="50" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView

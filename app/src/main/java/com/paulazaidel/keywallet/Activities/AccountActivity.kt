@@ -26,27 +26,26 @@ class AccountActivity : AppCompatActivity() {
 
         getAccountFromIntent()
 
-        fab.setOnClickListener { view ->
+        fab.setOnClickListener { _ ->
             if (validateForm())
                 saveAccount()
         }
     }
 
     private fun getAccountFromIntent() {
-        if (intent.extras != null)
-            if (intent.extras.containsKey("account")) {
-                val account = intent.extras.getSerializable("account") as? Account
+        if (intent?.extras?.containsKey("account")!!) {
+            val account = intent?.extras?.getSerializable("account") as? Account
 
-                if (account != null) {
-                    txt_acc_id.setText(account.id.toString())
-                    edt_acc_description.setText(account.description)
-                    edt_acc_username.setText(account.username)
-                    edt_acc_password.setText(account.password)
-                    edt_acc_url.setText(account.url)
+            if (account != null) {
+                txt_acc_id.setText(account.id.toString())
+                edt_acc_description.setText(account.description)
+                edt_acc_username.setText(account.username)
+                edt_acc_password.setText(account.password)
+                edt_acc_url.setText(account.url)
 
-                    title = resources.getText(R.string.title_activity_edit)
-                }
+                title = resources.getText(R.string.title_activity_edit)
             }
+        }
     }
 
     private fun saveAccount() {
@@ -63,7 +62,8 @@ class AccountActivity : AppCompatActivity() {
         else
             AppDatabase.getAppDatabase(this).accountDao().insert(account)
 
-        Toast.makeText(this, getString(R.string.app_add_successfully), Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.app_add_successfully), Toast.LENGTH_SHORT)
+            .show()
 
         finish()
     }
@@ -79,7 +79,10 @@ class AccountActivity : AppCompatActivity() {
         return true
     }
 
-    private fun validateTextInputRequired(textInput: TextInputLayout, edtText: EditText): Boolean {
+    private fun validateTextInputRequired(
+        textInput: TextInputLayout,
+        edtText: EditText
+    ): Boolean {
         return if (edtText.text.toString().trim().isEmpty()) {
             textInput.error = getString(R.string.app_err_required)
             edtText.requestFocus()
@@ -91,8 +94,8 @@ class AccountActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if (item?.itemId == android.R.id.home){
-           finish()
+        if (item?.itemId == android.R.id.home) {
+            finish()
             return true
         } else return super.onOptionsItemSelected(item)
     }

@@ -6,7 +6,7 @@
     <string name="title_activity_edit">Edit</string>
     <string name="app_create">New</string>
     <string name="app_description">Description</string>
-    <string name="app_username">User</string>
+    <string name="app_username">Username</string>
     <string name="app_password">Password</string>
     <string name="app_url">URL Site</string>
     <string name="app_save">Save</string>

@@ -25,17 +25,17 @@ class ListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_list)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
+        fab.setOnClickListener {
             val intent = Intent(this, AccountActivity::class.java)
             startActivity(intent)
         }
 
-        lv_accounts.setOnItemClickListener { parent, view, position, id ->
+        lv_accounts.setOnItemClickListener { _, _, position, _ ->
             var account = adapter.getItem(position)
             showAccount(account)
         }
 
-        lv_accounts.setOnMenuItemClickListener { position, menu, index ->
+        lv_accounts.setOnMenuItemClickListener { position, _, index ->
             if (index == 0) { // Edit
                 var account = adapter.getItem(position)
                 val intent = Intent(this, AccountActivity::class.java)
@@ -54,21 +54,21 @@ class ListActivity : AppCompatActivity() {
     }
 
     private fun showDeleteDialog(account: Account) {
-        val dialog = AlertDialog.Builder(this)
+        val alert = AlertDialog.Builder(this)
 
-        dialog.setTitle(account.description)
-        dialog.setMessage(R.string.app_remove_question)
+        alert.setTitle(account.description)
+        alert.setMessage(R.string.app_remove_question)
 
-        dialog.setPositiveButton(R.string.app_yes) { dialog, which ->
+        alert.setPositiveButton(R.string.app_yes) { dialog, _ ->
             deleteAccoun(account)
             dialog.dismiss()
         }
-        dialog.setNegativeButton(R.string.app_no) { dialog, which ->
+        alert.setNegativeButton(R.string.app_no) { dialog, _ ->
             dialog.cancel()
             dialog.dismiss()
         }
 
-        dialog.create().show()
+        alert.create().show()
     }
 
     private fun deleteAccoun(account: Account){

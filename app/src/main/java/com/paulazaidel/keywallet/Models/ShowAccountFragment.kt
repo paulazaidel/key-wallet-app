@@ -33,7 +33,7 @@ class ShowAccountFragment : DialogFragment {
         alert.setTitle(account.description)
         alert.setView(view)
 
-        alert.setPositiveButton("OK") { dialog, whichButton ->
+        alert.setPositiveButton("OK") { dialog, _ ->
             dialog.cancel()
             dialog.dismiss()
         }

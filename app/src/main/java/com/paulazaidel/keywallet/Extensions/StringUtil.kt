@@ -21,3 +21,8 @@ fun String.decrypt(): String {
     }
     return String(base, Charsets.UTF_8)
 }
+
+fun String.toString(size: Int) : String {
+    return if (this.length > 15) this.substring(0, size) + "..."
+    else this
+}
