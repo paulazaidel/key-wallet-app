@@ -12,12 +12,9 @@ import java.security.KeyStore
 import javax.crypto.Cipher
 import javax.crypto.KeyGenerator
 import java.io.IOException
-import android.R
 import android.app.Activity
-import android.provider.Settings
 import java.lang.Exception
 import java.security.SecureRandom
-import java.util.*
 import javax.crypto.spec.IvParameterSpec
 
 class LoginActivity : AppCompatActivity() {
@@ -31,15 +28,27 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         keyguardManager = getSystemService(Context.KEYGUARD_SERVICE) as KeyguardManager
+    }
 
-        generateKey()
+    override fun onResume() {
+        super.onResume()
 
-        if (keyguardManager!!.isKeyguardSecure) {
-            if (logged())
-                showAccountsActivity()
+        loginApp()
+    }
+
+    private fun loginApp() {
+        if (hasAuthentication()){
+            generateKey()
+            if (!logged()) {
+                showAuthenticationScreen()
+            }
         } else {
-            showAccountsActivity()
+            showAccountsScreen()
         }
+    }
+
+    private fun hasAuthentication(): Boolean {
+        return keyguardManager!!.isKeyguardSecure
     }
 
     private fun generateKey() {
@@ -89,36 +98,35 @@ class LoginActivity : AppCompatActivity() {
             val cipher = Cipher.getInstance(transformation)
 
             cipher.init(Cipher.DECRYPT_MODE, secretKey, IvParameterSpec(ByteArray(16)))
-            //cipher.doFinal(SecureRandom.getSeed(16))
+            cipher.doFinal(secretKey.encoded)
 
             //User has recently authenticated, you will reach here.
             return true
-        } catch (e : Exception) {
-
         }
-
-        showAuthenticationScreen()
+        catch (e : Exception) { }
         return false
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (resultCode == Activity.RESULT_OK) {
-            if (logged ()) {
-                showAccountsActivity()
-            }
-        } else {
-            showAuthenticationScreen()
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == REQUEST_CODE_CONFIRM_DEVICE_CREDENTIALS) {
+            if (resultCode == Activity.RESULT_OK)
+                showAccountsScreen()
+            else
+                showAuthenticationScreen()
         }
     }
 
     private fun showAuthenticationScreen() {
-        val intent = keyguardManager?.createConfirmDeviceCredentialIntent(null, null)
-        if (intent != null)
+        val intent = keyguardManager?.createConfirmDeviceCredentialIntent(null, null) as Intent
             startActivityForResult(intent, REQUEST_CODE_CONFIRM_DEVICE_CREDENTIALS)
     }
 
-    private fun showAccountsActivity() {
+    private fun showAccountsScreen() {
         val intent = Intent(this, ListActivity::class.java)
         startActivity(intent)
+
+        finish()
     }
 }

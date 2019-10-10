@@ -7,12 +7,14 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputLayout
 import com.paulazaidel.keywallet.DataBase.AppDatabase
+import com.paulazaidel.keywallet.Extensions.decrypt
 import com.paulazaidel.keywallet.Extensions.encrypt
 import com.paulazaidel.keywallet.Models.Account
 import com.paulazaidel.keywallet.R
 
 import kotlinx.android.synthetic.main.activity_account.*
 import kotlinx.android.synthetic.main.content_account.*
+import java.lang.Exception
 
 
 class AccountActivity : AppCompatActivity() {
@@ -33,14 +35,14 @@ class AccountActivity : AppCompatActivity() {
     }
 
     private fun getAccountFromIntent() {
-        if (intent?.extras?.containsKey("account")!!) {
+        if (intent!!.extras?.containsKey("account") != null) {
             val account = intent?.extras?.getSerializable("account") as? Account
 
             if (account != null) {
                 txt_acc_id.setText(account.id.toString())
                 edt_acc_description.setText(account.description)
                 edt_acc_username.setText(account.username)
-                edt_acc_password.setText(account.password)
+                edt_acc_password.setText(account.password.decrypt())
                 edt_acc_url.setText(account.url)
 
                 title = resources.getText(R.string.title_activity_edit)
