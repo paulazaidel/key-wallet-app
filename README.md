@@ -28,7 +28,7 @@ Watch our [RoadMap](https://github.com/PaulaZaidel/KeyWalletApp/wiki) to know th
 ## Contributing
 You can send how many Pull-Requests do you want, I'll be glad to analyse and accept them! And if you have any question about the project...
 
-Email-me: paulazaidel@@outlook.com
+Email-me: paulazaidel@outlook.com
 
 Connect with me at [LinkedIn](https://www.linkedin.com/in/paulazaidel/)
 
