@@ -1,4 +1,4 @@
-package com.paulazaidel.keywallet.Activities
+package com.paulazaidel.keywallet.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

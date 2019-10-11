@@ -1,11 +1,12 @@
-package com.paulazaidel.keywallet.Models
+package com.paulazaidel.keywallet.fragments
 
 import android.app.AlertDialog
 import android.app.Dialog
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
-import com.paulazaidel.keywallet.Extensions.decrypt
+import com.paulazaidel.keywallet.helpers.decrypt
 import com.paulazaidel.keywallet.R
+import com.paulazaidel.keywallet.models.Account
 import kotlinx.android.synthetic.main.show_account_layout.view.*
 
 class ShowAccountFragment : DialogFragment {

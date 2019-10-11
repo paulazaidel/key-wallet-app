@@ -1,4 +1,4 @@
-package com.paulazaidel.keywallet.Activities
+package com.paulazaidel.keywallet.activities
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -6,15 +6,14 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputLayout
-import com.paulazaidel.keywallet.DataBase.AppDatabase
-import com.paulazaidel.keywallet.Extensions.decrypt
-import com.paulazaidel.keywallet.Extensions.encrypt
-import com.paulazaidel.keywallet.Models.Account
+import com.paulazaidel.keywallet.database.AppDatabase
+import com.paulazaidel.keywallet.helpers.decrypt
+import com.paulazaidel.keywallet.helpers.encrypt
+import com.paulazaidel.keywallet.models.Account
 import com.paulazaidel.keywallet.R
 
 import kotlinx.android.synthetic.main.activity_account.*
 import kotlinx.android.synthetic.main.content_account.*
-import java.lang.Exception
 
 
 class AccountActivity : AppCompatActivity() {

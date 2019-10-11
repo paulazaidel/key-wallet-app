@@ -1,4 +1,4 @@
-package com.paulazaidel.keywallet.Models
+package com.paulazaidel.keywallet.helpers
 
 import android.app.Activity
 import com.baoyz.swipemenulistview.SwipeMenu

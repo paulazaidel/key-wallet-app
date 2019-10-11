@@ -1,10 +1,10 @@
-package com.paulazaidel.keywallet.DataBase
+package com.paulazaidel.keywallet.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.paulazaidel.keywallet.Models.Account
+import com.paulazaidel.keywallet.models.Account
 
 
 

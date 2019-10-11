@@ -1,4 +1,4 @@
-package com.paulazaidel.keywallet.Models
+package com.paulazaidel.keywallet.adapters
 
 import android.app.Activity
 import android.view.View
@@ -6,8 +6,9 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import com.amulyakhare.textdrawable.TextDrawable
 import com.amulyakhare.textdrawable.util.ColorGenerator
-import com.paulazaidel.keywallet.Extensions.toString
+import com.paulazaidel.keywallet.helpers.toString
 import com.paulazaidel.keywallet.R
+import com.paulazaidel.keywallet.models.Account
 import kotlinx.android.synthetic.main.list_item_layout.view.*
 
 

@@ -1,4 +1,4 @@
-package com.paulazaidel.keywallet.Extensions
+package com.paulazaidel.keywallet.helpers
 
 import android.os.Build
 import java.util.*

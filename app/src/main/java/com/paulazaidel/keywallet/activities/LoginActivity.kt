@@ -1,4 +1,4 @@
-package com.paulazaidel.keywallet.Activities
+package com.paulazaidel.keywallet.activities
 
 import android.app.KeyguardManager
 import android.content.Context

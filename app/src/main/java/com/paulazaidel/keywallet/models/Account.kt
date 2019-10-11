@@ -1,4 +1,4 @@
-package com.paulazaidel.keywallet.Models
+package com.paulazaidel.keywallet.models
 
 import androidx.annotation.NonNull
 import androidx.room.*
