@@ -3,7 +3,7 @@ The KeyWallet is a project written in kotlin
 
 Do not remember your account password? Key Wallet was created to make this moment easier for you. Save your accounts in Key Wallet App and get your account data whenever you need.
 
-![](https://github.com/PaulaZaidel/KeyWalletApp/blob/master/images/Screen.jpg)![](https://github.com/PaulaZaidel/KeyWalletApp/blob/master/images/Accounts.jpg)![](https://github.com/PaulaZaidel/KeyWalletApp/blob/master/images/Details.jpg)![](https://github.com/PaulaZaidel/KeyWalletApp/blob/master/images/Modified%20Account.jpg)
+![](https://github.com/PaulaZaidel/KeyWalletApp/blob/master/images/screens.png)
 
 This project is part of my personal portfolio, so, I'll be happy if you could provide me any feedback about the project, code, structure or anything that you can report that could make me a better developer!
 
