@@ -23,6 +23,6 @@ fun String.decrypt(): String {
 }
 
 fun String.toString(size: Int) : String {
-    return if (this.length > 15) this.substring(0, size) + "..."
+    return if (this.length > size) this.substring(0, size) + "..."
     else this
 }

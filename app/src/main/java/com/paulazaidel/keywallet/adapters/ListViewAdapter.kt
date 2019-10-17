@@ -44,8 +44,8 @@ class ListViewAdapter : BaseAdapter {
         val drawable = TextDrawable.builder()
             .buildRound(firstLetter.toString(), color)
 
-        view.txt_list_description.text = account.description.toString(17)
-        view.txt_list_username.text = account.username.toString(17)
+        view.txt_list_description.text = account.description.toString(22)
+        view.txt_list_username.text = account.username.toString(22)
         view.img_list_view.setImageDrawable(drawable)
 
         return view

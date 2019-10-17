@@ -60,7 +60,7 @@ class ListActivity : AppCompatActivity() {
         alert.setMessage(R.string.app_remove_question)
 
         alert.setPositiveButton(R.string.app_yes) { dialog, _ ->
-            deleteAccoun(account)
+            deleteAccount(account)
             dialog.dismiss()
         }
         alert.setNegativeButton(R.string.app_no) { dialog, _ ->
@@ -71,7 +71,7 @@ class ListActivity : AppCompatActivity() {
         alert.create().show()
     }
 
-    private fun deleteAccoun(account: Account){
+    private fun deleteAccount(account: Account){
         AppDatabase.getAppDatabase(this).accountDao().delete(account)
         getAllAccounts()
 
